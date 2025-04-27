@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Heart Pattern Background */
+/* Heart Pattern Background */
+.bg-heart-pattern {
+    background-image: url('https://www.transparenttextures.com/patterns/heart-pattern.png');
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  /* Mobile-Friendly Adjustments */
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 40px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    .card-content {
+      padding: 4px;
+    }
+  }
+  
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Space between cards */
+  }
+  
+  /* Individual card styling */
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 16px;
+    background: url('https://www.example.com/pink-heart-background.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  /* Hover effect for scaling and shadow */
+  .card-container:hover .card-content {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Styling for card content, semi-transparent white background */
+  .card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white overlay */
+    border-radius: 16px;
+    z-index: 1;
+  }
+  
+  /* Card text styling */
+  .card-lines {
+    z-index: 2;
+    font-size: 1.2rem;
+    color: #333; /* Darker text for better readability */
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Card title */
+  .card-title {
+    z-index: 2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff1493; /* Contrasting pink for title */
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Shadow for readability */
+  }
+  
+  /* Card footer */
+  .card-footer {
+    z-index: 2;
+    text-align: center;
+    color: #ff1493; /* Matching footer color */
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Slight shadow */
+    margin-top: auto;
+  }
+  
