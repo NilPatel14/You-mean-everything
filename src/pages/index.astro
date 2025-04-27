@@ -4,16 +4,13 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout>
-  <section class="container mx-auto text-center py-8">
-    <div class="mb-8">
-      <h1 class="text-[48px] font-extrabold text-red-500">Hetu</h1>
-      <h2 class="text-3xl font-semibold text-gray-800">Tu Kem Badhathi Alag Chu?</h2>
-    </div>
-
-    <div class="flex justify-center">
-      <div class="swiper-wrapper" style="margin-left: 10px; margin-right: 10px;">
-        <div class="p-6 space-y-6 relative group rounded-xl swiper-slide h-full self-stretch bg-gradient-to-r from-pink-500 via-purple-600 to-red-500 shadow-2xl">
-          <div class="absolute top-0 left-0 w-full gap-10 h-full bg-heart-pattern bg-cover bg-center opacity-30 rounded-xl"></div>
+	<section class="container mx-auto text-center py-8">
+	  <div class="mb-8">
+		<h1 class="text-4xl font-extrabold text-red-500">Hetu</h1>
+		<h2 class="text-xl font-semibold text-gray-800">Tu Kem Badhathi Alag Chu?</h2>
+	  </div>
+  
+	  <div class="card-container">
           <Card Lines="Jyare first time tane joyi ... Tyare mane tara ma kaik alag dekhayu je biji koi girl ma nathi... Tane yad che ne pelo video library vado jema ame badha masti karta ta ne tame khali bhanta ta .. hetu tu alag j 6u .. etle j mane gamu 6u" />
           <Card Lines="P6i jyare first time tame mara par angry thaya and badho gusso utaryo devanshi no nd het no... Pn te khali ne khali mane kidhu .. e hato taro trust mara par.. tane khabar hati ke het nathi saro and hu ena sathe rahu 6u pn e time par te mane ek pn var evu natu kidhu ke tu alag thai ja emathi ke ena jode rehvanu band kari de ane tame mane em pn nathi kidhu ke atyare aapda jode je pn vat thai e koine keto nai cause tane khbar hati ke hu koine nathi kehvano ... Agar tara jagya e koi biju hot to 100% mane em j ket ke tare ena jode vat nai karvani or ena jode friendship todi de.. etle j tu badha thi alag 6u and etle j tu Mane gamu 6u" />
           <Card Lines="Jyare first time aapde kankariya gaya nd main tamaro hath pakdi ne rakhyo to and first time tame mane pu6yu ke tu su feel kare che ... Tyare main tane first time mara dil ni badhi j vat Kari... Tane khabar hati ke tare aama nathi padvu and tarathi possible nathi... Still te mane block karvana badle mane samjvano try karyo... Etle j tu Mane gamu 6u" />
@@ -28,13 +25,15 @@ import Card from "../components/Card.astro";
           <Card Lines="Haji em to kehva jais to baujj badhu che pn badhu aaje Kai dais to mara dhingla ne manava mate p6i tohh kaik karvu padse ne (yesh yesh Maru pyaru angry bird jo 6u)" />
           <Card Lines="Have khbr padi Kem tu Mane sauthi vadhare gamu 6u and Kem tame badha thi alag 6o 🥰" />
           <Card Lines="- I love you infinityyyyyyy wifeyyyyyy 😘🥰" />
-        </div>
-      </div>
-    </div>
-  </section>
-</Layout>
+		</div>
 
-<script is:inline>
+		 <!-- To Be Continued Section -->
+		 <div class="to-be-continued" style="margin-bottom:20px">
+			Stay Tuned... ❤️ More is coming soon... 🌟
+		  </div>
+	</section>
+  </Layout>
+<!-- <script is:inline>
 	
 document.querySelectorAll('.card-content').forEach(card => {
 card.addEventListener('mouseover', function() {
@@ -47,4 +46,4 @@ card.addEventListener('mouseout', function() {
 });
 });
 
-</script>
+</script> -->

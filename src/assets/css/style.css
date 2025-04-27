@@ -1,109 +1,204 @@
+/* Base Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Heart Pattern Background */
-/* Heart Pattern Background */
-.bg-heart-pattern {
-    background-image: url('https://www.transparenttextures.com/patterns/heart-pattern.png');
-    background-repeat: repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  
-  /* Mobile-Friendly Adjustments */
-  @media screen and (max-width: 640px) {
-    h1 {
-      font-size: 40px;
-    }
-  
-    h2 {
-      font-size: 24px;
-    }
-  
-    .card-content {
-      padding: 4px;
-    }
-  }
-  
+/* Background */
+body {
+  background: linear-gradient(135deg, rgba(255, 85, 204, 0.8), rgba(0, 179, 255, 0.7));
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeInPage 1.5s ease-in-out;
+}
 
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px; /* Space between cards */
+/* Page Fade-in Animation */
+@keyframes fadeInPage {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  /* Individual card styling */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container for all cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  animation: fadeInCards 2s ease-in-out;
+}
+
+/* Cards Animation */
+@keyframes fadeInCards {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Individual Card Styles */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInCards 2s ease-in-out forwards;
+}
+
+/* Hover Effect */
+.card-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Text */
+.card-lines {
+  font-size: 1rem;
+  color: #6a1b9a; /* Soft Lavender */
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Text */
+.card-footer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff1493; /* Heartfelt pink */
+  margin-top: auto;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+/* Card Overlay for better readability */
+.card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  border-radius: 16px;
+}
+
+/* Title Styling */
+h1, h2 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeInText 1.5s ease-in-out forwards;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ff1493;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Change color of "Tu mane kem gamu chu" line */
+h2 {
+  color: #ff66b3; /* Soft Pink */
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* "To Be Continued" Section */
+.to-be-continued {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff66b3; /* Soft Pink */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.to-be-continued:hover {
+  color: #ff1493; /* Darker Pink on hover */
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
   .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    border-radius: 16px;
-    background: url('https://www.example.com/pink-heart-background.png') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    max-width: 350px;
-    height: 400px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    margin-bottom: 30px;
-    position: relative;
+    max-width: 90%;
+    height: auto;
   }
-  
-  /* Hover effect for scaling and shadow */
-  .card-container:hover .card-content {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  .to-be-continued {
+    font-size: 1.5rem;
   }
-  
-  /* Styling for card content, semi-transparent white background */
-  .card-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7); /* Transparent white overlay */
-    border-radius: 16px;
-    z-index: 1;
-  }
-  
-  /* Card text styling */
-  .card-lines {
-    z-index: 2;
-    font-size: 1.2rem;
-    color: #333; /* Darker text for better readability */
-    text-align: center;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Card title */
-  .card-title {
-    z-index: 2;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ff1493; /* Contrasting pink for title */
-    text-align: center;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Shadow for readability */
-  }
-  
-  /* Card footer */
-  .card-footer {
-    z-index: 2;
-    text-align: center;
-    color: #ff1493; /* Matching footer color */
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Slight shadow */
-    margin-top: auto;
-  }
-  
+}
+

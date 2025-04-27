@@ -4,27 +4,15 @@ import "../assets/css/style.css";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Tu Kem Mane Gamu 6u</title>
-		<link rel="stylesheet" href="../assets/css/style.css">
-	</head>
-	<body style=" background-image: url('https://www.transparenttextures.com/patterns/geometry.png'); /* New background image URL */
-  background-repeat: repeat;
-  background-position: center center;
-  background-size: cover;">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Tu Kem Mane Gamu 6u</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
