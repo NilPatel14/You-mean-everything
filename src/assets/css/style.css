@@ -62,7 +62,7 @@ body {
   padding: 25px;
   width: 100%;
   max-width: 350px;
-  height: 400px;
+  /* height: 400px; */
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
@@ -167,7 +167,6 @@ h2 {
 
 .to-be-continued:hover {
   color: #ff1493; /* Darker Pink on hover */
-  transform: scale(1.1);
   cursor: pointer;
 }
 
